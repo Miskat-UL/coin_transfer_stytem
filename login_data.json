@@ -1,1 +1,4 @@
-[{"username": "showmik", "email": "showmik@hotmail.com", "number": 98163, "password": "ami_jani_na"}, {"username": "r", "email": "dfs", "number": 14124, "password": "dsfsa"}, {"username": "t", "email": "e", "number": 4, "password": "12"}]
+[
+  {"username": "showmik", "email": "showmik@hotmail.com", "number": 98163, "password": "ami_jani_na"},
+  {"username": "r", "email": "dfs", "number": 14124, "password": "dsfsa"}
+]
