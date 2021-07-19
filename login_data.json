@@ -25,5 +25,12 @@
     "number": 1932932,
     "password": "sadi1234",
     "account_balance": null
+  },
+  {
+    "username": "abrar",
+    "email": "aaaa",
+    "number": 13231,
+    "password": "abrar123",
+    "account_balance": null
   }
 ]

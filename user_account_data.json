@@ -1,12 +1,12 @@
 [
   {
-    "username": "sdsada",
-    "passsword": "adad",
-    "total_money": null
-  },
-  {
     "username": "sadi",
     "passsword": "sadi1234",
     "total_money": 1000
+  },
+  {
+    "username": "abrar",
+    "passsword": "abrar123",
+    "total_money": 100
   }
 ]
