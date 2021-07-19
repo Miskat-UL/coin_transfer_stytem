@@ -1,4 +1,29 @@
 [
-  {"username": "showmik", "email": "showmik@hotmail.com", "number": 98163, "password": "ami_jani_na"},
-  {"username": "r", "email": "dfs", "number": 14124, "password": "dsfsa"}
+  {
+    "username": "showmik",
+    "email": "showmik@hotmail.com",
+    "number": 98163,
+    "password": "ami_jani_na"
+  },
+  {
+    "username": "tofayel",
+    "email": "tofayel@gmail.com",
+    "number": 1231,
+    "password": "aaaa",
+    "account_balance": null
+  },
+  {
+    "username": "clo",
+    "email": "clo@gmail.com",
+    "number": 133,
+    "password": "eeee",
+    "account_balance": null
+  },
+  {
+    "username": "sadi",
+    "email": "sadi@gmail.com",
+    "number": 1932932,
+    "password": "sadi1234",
+    "account_balance": null
+  }
 ]

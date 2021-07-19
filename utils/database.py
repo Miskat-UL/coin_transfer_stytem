@@ -1,7 +1,6 @@
 import json
 from utils import account_funtionality
 
-
 file_name = 'login_data.json'
 
 
@@ -31,14 +30,15 @@ def create(user, email, phone, password):
            'username': user,
            'email': email,
            'number': phone,
-           'password': password
+           'password': password,
+           'account_balance': None
         }
 
     with open('login_data.json', 'r+') as file:
         data = json.load(file)
         data.append(program_list)
         file.seek(0)
-        json.dump(data, file)
+        json.dump(data, file, indent=2)
 
 
 def login(user, password):

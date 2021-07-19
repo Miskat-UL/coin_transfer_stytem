@@ -1,5 +1,5 @@
 import json
-
+from utils import user
 file_name = 'login_data.json'
 
 
@@ -34,11 +34,11 @@ def login_after_menu(name):
     """)
     while user_choice != 'l':
         if user_choice.lower() == 'a':
-            account_details(name)
+            user.account_details(name)
         elif user_choice == 'd':
-            deposite_money()
+            user.deposit_money(name)
         elif user_choice == 's':
-            send_money()
+            user.send_money(name)
         else:
             print('Unknown command, Please try again..!')
 
@@ -61,13 +61,4 @@ def account_details(name):
             )
 
     # login_after_menu(name)
-
-
-def send_money():
-    total_tk = 1000
-    tk = int(input("Enter amount you want to sent: "))
-    print(f"your previous tk was:${total_tk} ")
-    remaining_tk = total_tk - tk
-    print(f"After send you have :${remaining_tk}")
-
 

@@ -9,6 +9,7 @@
 #TODO: we will add more functionality to this system. like, user can sent money to another user .
 import json
 from utils import database
+from utils import user
 
 
 def menu():
@@ -37,12 +38,13 @@ def menu():
 
 def account_create():
     print('Welcome to our app. Please fill up the information below for opening a account. ')
-    user = input('Username: ')
+    username = input('Username: ')
     email = input("Email: ")
     phone = int(input("phone: "))
     password = input("password: ")
-    data = (user, email, phone, password)
+    data = (username, email, phone, password)
     database.create(*data)
+    user.user(name=username, password=password)
     user_choice = input("account successfully created. press 'L' to login now or press 'Q' for main menu. ")
 
     while user_choice != 'q':
