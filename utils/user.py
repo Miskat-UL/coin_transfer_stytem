@@ -50,25 +50,34 @@ def send_money(name):
     for item in files.json_load():
         if item['username'] == name:
             acc_balance = item["total_money"]
-    retrive_info(balance = acc_balance)
+    retrive_info(balance = acc_balance, username=name)
 
 
-def retrive_info(balance):
+def retrive_info(balance, username):
     send_person = input("Receiver name: ")
     send_amount = int(input("Enter amount you want to send: "))
+    remaining_balance = balance - send_amount
     print(f"your balance {balance}")
-    my_file = files.json_load()
-    for info in my_file:
-        if info['username'] in send_person:
-            print("person found")
-            print("sending money on process............")
-            info['total_money'] += send_amount
-            with open('user_account_data.json', 'r+') as file:
-                json.dump(my_file, file, indent=2)
-            break
+    if send_amount >= balance:
+        print("sorry!. do not have that much money on your account.")
     else:
-        print("sorry user not found..")
+        my_file = files.json_load()
+        for i in my_file:
+            if username == i['username']:
+                i['total_money'] = remaining_balance
+                with open('user_account_data.json', 'r+') as file:
+                    json.dump(my_file, file, indent=2)
 
+        for info in my_file:
+            if info['username'] in send_person:
+                print("person found")
+                print("sending money on process............")
+                info['total_money'] += send_amount
+                with open('user_account_data.json', 'r+') as file:
+                    json.dump(my_file, file, indent=2)
+                break
+        else:
+            print("sorry user not found..")
 
 def deposit_money(name):
     print(f'Welcome Mr.{name}')
