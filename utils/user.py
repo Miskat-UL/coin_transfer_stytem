@@ -70,9 +70,38 @@ def retrive_info(balance):
         print("sorry user not found..")
 
 
-
-
-
 def deposit_money(name):
-    pass
+    print(f'Welcome Mr.{name}')
+    deposite_money = int(input("How much you want to deposite($): "))
+    my_file = files.json_load()
+
+    for info in my_file:
+        if info['username'] == name:
+            info['total_money'] += deposite_money
+            with open('user_account_data.json', 'r+') as file:
+                json.dump(my_file, file,indent=2)
+
+    print("Deposite successful")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
