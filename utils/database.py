@@ -54,5 +54,5 @@ def login(user, password):
                 account_funtionality.login_after_menu(username)
                 break
     else:
-        print('username/ password is incorrect')
+        print('username or password is incorrect')
 
